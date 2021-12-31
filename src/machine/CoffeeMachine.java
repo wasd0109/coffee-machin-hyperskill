@@ -233,7 +233,7 @@ public class CoffeeMachine {
                     break;
                 }
                 if (cupsCount > 0) {
-                    Coffee coffeeType = inputToEnum(input);
+                    Coffee coffeeType = Coffee.findByInputString(input);
                     boolean isSuccessful = makeCoffee(coffeeType);
                     if (isSuccessful) {
                         System.out.println("I have enough resources, making you a coffee!");
